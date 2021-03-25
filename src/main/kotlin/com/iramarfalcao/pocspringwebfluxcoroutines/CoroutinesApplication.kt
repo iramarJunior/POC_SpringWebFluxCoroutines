@@ -19,7 +19,7 @@ class CoroutinesApplication {
     @FlowPreview
     @Bean
     fun routes(handlers: Handlers) = coRouter {
-        GET("/", handlers::index)
+//        GET("/", handlers::index)
         GET("/suspend", handlers::suspending)
         GET("/sequential-flow", handlers::sequentialFlow)
         GET("/concurrent-flow", handlers::concurrentFlow)
@@ -38,10 +38,10 @@ class Handlers(builder: WebClient.Builder) {
     private val banner = Banner("title", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
     private val client = builder.baseUrl("http://localhost:8080").build()
 
-    suspend fun index(request: ServerRequest) =
-        ServerResponse
-            .ok()
-            .renderAndAwait("index", mapOf("banner" to banner))
+//    suspend fun index(request: ServerRequest) =
+//        ServerResponse
+//            .ok()
+//            .renderAndAwait("index", mapOf("banner" to banner))
 
     suspend fun suspending(request: ServerRequest) =
         ServerResponse

@@ -36,12 +36,12 @@ class CoroutinesController(builder: WebClient.Builder) {
         banner
     }
 
-    @GetMapping("/")
-    suspend fun render(model: Model): String {
-        delay(10)
-        model["banner"] = banner
-        return "index"
-    }
+//    @GetMapping("/")
+//    suspend fun render(model: Model): String {
+//        delay(10)
+//        model["banner"] = banner
+//        return "index"
+//    }
 
     @GetMapping("/sequential-flow")
     @ResponseBody

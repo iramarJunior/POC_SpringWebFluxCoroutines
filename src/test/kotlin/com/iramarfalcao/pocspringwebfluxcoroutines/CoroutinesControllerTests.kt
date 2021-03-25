@@ -14,10 +14,10 @@ class CoroutinesControllerTests(@Autowired val client: WebTestClient) {
 
     private val banner = Banner("title", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
 
-    @Test
-    fun index() {
-        client.get().uri("/controller/").exchange().expectStatus().is2xxSuccessful.expectBody()
-    }
+//    @Test
+//    fun index() {
+//        client.get().uri("/controller/").exchange().expectStatus().is2xxSuccessful.expectBody()
+//    }
 
     @Test
     fun suspending() {
